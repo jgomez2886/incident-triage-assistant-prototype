@@ -31,6 +31,7 @@ htmlcov/
 *.log
 
 # Generated presentation artifacts
+/presentation/
 presentation/Incident_Triage_Assistant_Interview_Deck.pptx
 presentation/Incident_Triage_Assistant_Interview_Deck.pdf
 presentation/rendered/
