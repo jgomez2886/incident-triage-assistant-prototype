@@ -29,3 +29,9 @@ htmlcov/
 # Local metadata and logs
 .DS_Store
 *.log
+
+# Generated presentation artifacts
+presentation/Incident_Triage_Assistant_Interview_Deck.pptx
+presentation/Incident_Triage_Assistant_Interview_Deck.pdf
+presentation/rendered/
+presentation/verification.json
