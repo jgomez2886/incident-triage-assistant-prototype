@@ -1,0 +1,29 @@
+[
+  {
+    "id": "INC-1042",
+    "title": "Elevated 5xx responses after application deployment",
+    "service": "claims-api",
+    "summary": "A fictional deployment was followed by an increase in HTTP 503 responses. Target health checks began failing shortly after the rollout. The sample evidence does not prove a single root cause.",
+    "observations": [
+      "14:02 UTC deployment version api-2026.10.02.3 started",
+      "14:06 UTC HTTP 503 rate increased from 0.2% to 8.4%",
+      "14:07 UTC 3 of 8 targets reported unhealthy",
+      "14:08 UTC request req-a17 returned 503 from the load balancer",
+      "14:09 UTC application logs show readiness check timeout on 3 targets"
+    ],
+    "tags": ["5xx", "503", "deployment", "load balancer", "target health", "readiness", "timeout"]
+  },
+  {
+    "id": "INC-1088",
+    "title": "Rate limit responses during a batch job",
+    "service": "eligibility-worker",
+    "summary": "A fictional batch job sent a higher request rate than the configured service quota. HTTP 429 responses increased, while 5xx rates remained near baseline.",
+    "observations": [
+      "09:30 UTC batch job eligibility-refresh started with 120 concurrent workers",
+      "09:34 UTC HTTP 429 rate increased to 11%",
+      "09:35 UTC HTTP 5xx rate remained below 0.3%",
+      "09:36 UTC retry attempts peaked at 4 times the normal rate"
+    ],
+    "tags": ["429", "rate limit", "quota", "throttling", "batch", "retry", "concurrency"]
+  }
+]

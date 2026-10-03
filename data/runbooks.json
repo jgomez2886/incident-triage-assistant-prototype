@@ -1,0 +1,14 @@
+[
+  {
+    "id": "RB-LOAD-BALANCER-HEALTH",
+    "title": "Investigate elevated 5xx responses and unhealthy targets",
+    "body": "First compare the start time of the errors with recent deployments or configuration changes. Check target health and the health-check path, port, timeout, and expected response code. Compare load-balancer access logs with application logs using timestamps and request IDs. If unhealthy targets began immediately after a rollout, pause or roll back according to the service owner's deployment procedure. Do not declare a root cause until the application and target-health evidence agree.",
+    "tags": ["5xx", "503", "load balancer", "target health", "deployment", "readiness", "timeout", "request id"]
+  },
+  {
+    "id": "RB-THROTTLING-429",
+    "title": "Investigate HTTP 429 responses and retry pressure",
+    "body": "Confirm whether 429 responses align with a batch job, traffic increase, or quota boundary. Check request rate, concurrency, and quota metrics. Use exponential backoff with jitter and avoid immediate synchronized retries. Reduce concurrency while validating recovery. Request a quota increase only after confirming expected demand and service limits.",
+    "tags": ["429", "rate limit", "quota", "throttling", "batch", "retry", "concurrency", "backoff"]
+  }
+]

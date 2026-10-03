@@ -1,0 +1,41 @@
+/* Small, scoped presentation layer over Streamlit's native components. */
+[data-testid="stForm"],
+.st-key-answer_panel,
+[class*="st-key-evidence_"] {
+    background: #ffffff;
+    border: 0 !important;
+    border-radius: 14px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgb(23 43 70 / 4%);
+}
+[data-testid="stHeading"] h1 {
+    letter-spacing: -0.04em;
+    font-weight: 650;
+}
+[data-testid="stMarkdownContainer"] p,
+[data-testid="stMarkdownContainer"] li {
+    line-height: 1.65;
+}
+[class*="st-key-evidence_"] [data-testid="stText"] {
+    font-size: 0.85rem;
+}
+[class*="st-key-evidence_"] [data-testid="stText"]:first-of-type {
+    color: #236e76;
+}
+[data-testid="stTable"] th,
+[data-testid="stTable"] td {
+    border-bottom: 1px solid #edf0f0;
+    padding: 0.65rem;
+    vertical-align: top;
+}
+[data-testid="stTable"] td:first-of-type {
+    font-family: monospace;
+    white-space: nowrap;
+    color: #236e76;
+}
+@media (max-width: 640px) {
+    [data-testid="stForm"], .st-key-answer_panel, [class*="st-key-evidence_"] {
+        padding: 1rem;
+    }
+    [data-testid="stTable"] td:first-of-type { white-space: normal; }
+}

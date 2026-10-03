@@ -1,0 +1,31 @@
+# Local environment files (a secret-free example may be committed)
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Virtual environments and dependencies
+.venv/
+venv/
+env/
+node_modules/
+
+# Python bytecode and test/tool caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.pytype/
+.hypothesis/
+.tox/
+.nox/
+.cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Local metadata and logs
+.DS_Store
+*.log
